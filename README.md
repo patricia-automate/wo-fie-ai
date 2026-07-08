@@ -268,7 +268,7 @@ Example:
 
 ## Daily Operations Workflow
 
-> ![Daily Operations Workflow](screenshots/daily report workflow-overview.png)
+> ![Daily Operations Workflow](screenshots/daily-report-workflow.png)
 
 ---
 
