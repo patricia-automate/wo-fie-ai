@@ -262,31 +262,31 @@ Example:
 
 ## Lead Processing Workflow
 
-> *(Add screenshot here)*
+> ![Lead Processing Workflow](screenshots/email intelligence workflow-overview.png)
 
 ---
 
 ## Daily Operations Workflow
 
-> *(Add screenshot here)*
+> ![Daily Operations Workflow](screenshots/daily report workflow-overview.png)
 
 ---
 
 ## Property Recommendation Workflow
 
-> *(Add screenshot here)*
+> ![Property Recommendation Workflow](screenshots/property search assistant workflow overview.png)
 
 ---
 
 ## Telegram Notifications
 
-> *(Add screenshot here)*
+> ![Telegram Notifications](screenshots/telegram-reportpng)
 
 ---
 
 ## AI Chat Demo
 
-> *(Add screenshot here)*
+> ![AI Chat Demo](screenshots/search output.png)
 
 ---
 
