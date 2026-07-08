@@ -262,7 +262,7 @@ Example:
 
 ## Lead Processing Workflow
 
-> ![Lead Processing Workflow](screenshots/email intelligence workflow-overview.png)
+> ![Lead Processing Workflow](screenshots/email-intelligence-workflow.png)
 
 ---
 
@@ -274,7 +274,7 @@ Example:
 
 ## Property Recommendation Workflow
 
-> ![Property Recommendation Workflow](screenshots/property search assistant workflow overview.png)
+> ![Property Recommendation Workflow](screenshots/property-search-assistant-workflowpng)
 
 ---
 
@@ -286,7 +286,7 @@ Example:
 
 ## AI Chat Demo
 
-> ![AI Chat Demo](screenshots/search output.png)
+> ![AI Chat Demo](screenshots/search-output.png)
 
 ---
 
