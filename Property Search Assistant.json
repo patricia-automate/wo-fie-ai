@@ -1,0 +1,204 @@
+{
+  "name": "Wo Fie AI - Property Search Assistant",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "32675442-4dd7-46ec-a4ba-792cae7e4307",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "e4abd4b9-a621-4b73-9507-14bd015ce50d",
+      "name": "When chat message received",
+      "webhookId": "a7c1966b-33a1-4908-aa72-b4fecf8cb55e"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are Wo Fie AI, an intelligent real estate assistant for a modern property agency.\n\nYour role is to help clients find suitable properties quickly and professionally.\n\nYou have access to a property knowledge base containing available listings.\n\nRULES:\n1. Always use the property search tool when answering questions about properties.\n2. Never invent property information.\n3. Only recommend properties found in the knowledge base.\n4. If no suitable property is found, politely explain that and ask for more details.\n\nWhen recommending properties, include:\n- Property name\n- Location\n- Property type\n- Number of bedrooms and bathrooms\n- Price\n- Availability status\n- Key features\n\nIf a client's request is unclear, ask helpful follow-up questions.\n\nExamples of useful follow-up questions:\n- What is your preferred location?\n- What is your budget?\n- How many bedrooms do you need?\n- Are you looking to buy or rent?\n\nBe professional, friendly, and concise."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "dcba94fa-2ce8-440b-b8e0-be9f79afc040",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        288,
+        208
+      ],
+      "id": "a04101f2-f554-4c6a-b4c8-e1c77d98b9fd",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "TgCyYxg3AyI2LCgz",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "=Search the Wo Fie AI property knowledge base for relevant real estate listings. Use this tool whenever a user asks about available properties, prices, locations, bedrooms, property types, availability, or recommendations. Always retrieve information from the knowledge base before answering.",
+        "tableName": {
+          "__rl": true,
+          "value": "property_vectors",
+          "mode": "list",
+          "cachedResultName": "property_vectors"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1.3,
+      "position": [
+        592,
+        240
+      ],
+      "id": "a2c85ac1-8ebf-47b9-96b1-0b365d04a426",
+      "name": "Supabase Vector Store",
+      "credentials": {
+        "supabaseApi": {
+          "id": "05s3hu90S5wd2Mn5",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        704,
+        432
+      ],
+      "id": "8e33a47c-4b90-4341-a4ab-c332ede75d14",
+      "name": "Embeddings Google Gemini",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "TgCyYxg3AyI2LCgz",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        432,
+        208
+      ],
+      "id": "cf1353c1-cd83-4f1e-ae82-29e9eb7ae69e",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Google Gemini": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "34f02614-ba7b-45b3-b1a2-617a2bca9b83",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3f9896fef077982d1644a41d1f9c935b26aa7c476f46aabbfe91427e6e7fc308"
+  },
+  "nodeGroups": [],
+  "id": "My7P8NphhuvwJoQx",
+  "tags": []
+}
