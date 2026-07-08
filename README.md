@@ -231,7 +231,7 @@ Example:
 
 # Workflows
 
-## 1️⃣ Lead Processing
+## 1. Lead Processing
 
 - Gmail Trigger
 - AI Classification
@@ -241,7 +241,7 @@ Example:
 
 ---
 
-## 2️⃣ Daily Operations
+## 2. Daily Operations
 
 - Retrieve Leads
 - AI Summary
@@ -249,7 +249,7 @@ Example:
 
 ---
 
-## Property Recommendation
+## 3. Property Recommendation
 
 - AI Agent
 - Vector Search
