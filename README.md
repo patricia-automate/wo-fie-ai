@@ -274,13 +274,13 @@ Example:
 
 ## Property Recommendation Workflow
 
-> ![Property Recommendation Workflow](screenshots/property-search-assistant-workflowpng)
+> ![Property Recommendation Workflow](screenshots/property-search-assistant-workflow.png)
 
 ---
 
 ## Telegram Notifications
 
-> ![Telegram Notifications](screenshots/telegram-reportpng)
+> ![Telegram Notifications](screenshots/telegram-report.png)
 
 ---
 
