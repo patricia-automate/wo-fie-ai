@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏠 Wo Fie AI
+# Wo Fie AI
 
 ### AI-Powered Real Estate Operations Assistant
 
@@ -16,7 +16,7 @@
 
 ---
 
-# 🚀 Overview
+# Overview
 
 **Wo Fie AI** is an AI-powered operations assistant built for modern real estate agencies.
 
@@ -26,7 +26,7 @@ The system classifies incoming inquiries, stores structured data in Supabase, no
 
 ---
 
-# 🎯 The Problem
+# The Problem
 
 Real estate agencies spend hours every day:
 
@@ -40,7 +40,7 @@ These repetitive tasks slow response times and reduce productivity.
 
 ---
 
-# 💡 The Solution
+# The Solution
 
 Wo Fie AI automates these workflows using AI Agents and workflow automation.
 
@@ -62,7 +62,7 @@ The platform:
 
 ---
 
-# ⚙️ System Architecture
+# System Architecture
 
 ## Lead Processing Pipeline
 
@@ -114,9 +114,9 @@ User Question
 
 ---
 
-# ✨ Features
+# Features
 
-## 🤖 AI Lead Classification
+## AI Lead Classification
 
 Automatically extracts:
 
@@ -129,7 +129,7 @@ Automatically extracts:
 
 ---
 
-## 🗄 Database Automation
+## Database Automation
 
 Automatically updates Supabase with:
 
@@ -141,14 +141,14 @@ Automatically updates Supabase with:
 
 ---
 
-## 📲 Telegram Notifications
+## Telegram Notifications
 
 Every new inquiry automatically generates an operational notification for the team.
 
 Example:
 
 ```
-🏠 New Buyer Inquiry
+New Buyer Inquiry
 
 Priority: High
 
@@ -163,7 +163,7 @@ Schedule Viewing
 
 ---
 
-## 📊 Daily Operations Brief
+## Daily Operations Brief
 
 Automatically generates reports such as:
 
@@ -183,7 +183,7 @@ Recommended Actions
 
 ---
 
-## 🔍 AI Property Search (RAG)
+## AI Property Search (RAG)
 
 Instead of relying only on the language model,
 
@@ -213,7 +213,7 @@ Example:
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
 | Category | Technology |
 |----------|------------|
@@ -229,7 +229,7 @@ Example:
 
 ---
 
-# 📂 Workflows
+# Workflows
 
 ## 1️⃣ Lead Processing
 
@@ -249,7 +249,7 @@ Example:
 
 ---
 
-## 3️⃣ Property Recommendation
+## Property Recommendation
 
 - AI Agent
 - Vector Search
@@ -258,7 +258,7 @@ Example:
 
 ---
 
-# 📸 Screenshots
+# Screenshots
 
 ## Lead Processing Workflow
 
@@ -290,7 +290,7 @@ Example:
 
 ---
 
-# 📁 Repository Structure
+# Repository Structure
 
 ```
 Wo-Fie-AI/
@@ -313,7 +313,7 @@ Wo-Fie-AI/
 
 ---
 
-# 💼 Skills Demonstrated
+# Skills Demonstrated
 
 - AI Workflow Automation
 - n8n
@@ -330,7 +330,7 @@ Wo-Fie-AI/
 
 ---
 
-# 🚧 Challenges Solved
+# Challenges Solved
 
 During development, I solved several real-world engineering challenges including:
 
@@ -344,7 +344,7 @@ During development, I solved several real-world engineering challenges including
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
 - WhatsApp Integration
 - CRM Integration
@@ -355,7 +355,7 @@ During development, I solved several real-world engineering challenges including
 
 ---
 
-# 👩🏽‍💻 About Me
+# About Me
 
 Hi! I'm **Patricia Fleku**, an aspiring AI Automation Engineer passionate about building intelligent workflow automation systems that solve real business problems.
 
@@ -369,7 +369,7 @@ I'm currently focused on:
 
 Let's connect!
 
-**LinkedIn:** *(Add your LinkedIn URL)*
+**LinkedIn:** *https://www.linkedin.com/in/patricia-fleku/*
 
 ---
 
